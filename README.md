@@ -30,6 +30,8 @@
 
 	git config --global alias.getgraph 'log --pretty=format:"%Cgreen%h%Creset %cd %C(blue)%an %C(yellow)%s" --graph --date=format:"%Y-%m-%d %H:%M"' построение дерева коммитов по формату
 	
+	git config --global alias.treelog 'log --pretty=format:"%Cgreen%h %C(blue)%an %C(yellow)%s %C(red)%d %Creset %cr" --graph --all' просмотр дерева со всеми ветками
+	
 ## СОЗДАНИЕ РЕПОЗИТОРИЕВ
 	git init [project-name] — создать новый локальный репозиторий с заданным именем.
 
@@ -107,8 +109,6 @@
 	
 	git branch -u [remote]/[branch] - (git branch -u origin/fixbranch) - настройка на отслеживание текущей ветки на ветку на удаленном сервере (либо ветку в другом репозитории)
 	
-	
-	
 ## РАБОТА С ФАЙЛАМИ
 
 	git rm [file] — удалить файл из рабочей директории и добавить в индекс информацию об удалении.
@@ -146,6 +146,8 @@
 	git log --pretty=oneline - отображение изменений в одну строку
 
 	git log --ghaph - отобразить граф (ветвление) истории
+	
+	git log --graph --all - отобразить граф всех веток (по умолчанию отображается история и ветвление только текущей ветки)
 
 	git log --author='Name' --after={1.week.ago} --pretty=oneline --abbrev-commit — посмотреть над чем работал заданный пользователь последнюю неделю.
 
